@@ -26,11 +26,7 @@ app.use(express.json());
 
 // Conexion a base de datos MongoDB Atlas 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-   
-  })
+  .connect(uri)
   .then(() => console.log("database is connected"))
   .catch((err) => console.log(err));
 
